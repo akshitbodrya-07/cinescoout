@@ -1,0 +1,144 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  padding: 1rem;
+}
+
+.modal {
+  background: #1c1c1e;
+  border-radius: 14px;
+  max-width: 620px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  animation: popIn 0.25s ease;
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.closeBtn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.closeBtn:hover {
+  background: #e50914;
+}
+
+.backdrop {
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  object-fit: cover;
+  border-radius: 14px 14px 0 0;
+  display: block;
+}
+
+.backdropPlaceholder {
+  width: 100%;
+  height: 180px;
+  background: #111;
+  border-radius: 14px 14px 0 0;
+}
+
+.body {
+  padding: 1.5rem;
+}
+
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-top-color: #e50914;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  margin: 1rem auto;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+  color: #fff;
+  margin: 0 0 10px;
+  line-height: 1;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 1.2rem;
+}
+
+.pill {
+  background: rgba(255, 255, 255, 0.07);
+  border: 0.5px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.rating {
+  color: #f5c518;
+  border-color: rgba(245, 197, 24, 0.3);
+  background: rgba(245, 197, 24, 0.08);
+}
+
+.overview {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.75;
+  margin-bottom: 1.4rem;
+}
+
+.officialBtn {
+  display: inline-block;
+  border: 1px solid rgba(229, 9, 20, 0.5);
+  border-radius: 8px;
+  padding: 9px 18px;
+  color: #e50914;
+  font-size: 13px;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.officialBtn:hover {
+  background: rgba(229, 9, 20, 0.1);
+}
+
+.errorText {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 14px;
+  text-align: center;
+  padding: 1rem 0;
+}

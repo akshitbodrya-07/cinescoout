@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background: #0d0d0d;
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* ── HERO ── */
+.hero {
+  background: #0d0d0d;
+  padding: 2.5rem 1.5rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.06);
+}
+
+.hero-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 80% 60% at 50% 0%,
+    rgba(229, 9, 20, 0.15) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.logo {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 3.2rem;
+  color: #fff;
+  letter-spacing: 5px;
+  line-height: 1;
+  margin-bottom: 4px;
+  position: relative;
+}
+
+.logo span {
+  color: #e50914;
+}
+
+.tagline {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.38);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  position: relative;
+}
+
+/* ── CONTENT ── */
+.content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+.results-label {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 1.2rem;
+}
+
+.results-label strong {
+  color: #fff;
+}
+
+/* ── GRID ── */
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+  gap: 16px;
+}
+
+/* ── STATES ── */
+.loading-state,
+.error-state,
+.empty-state {
+  text-align: center;
+  padding: 5rem 1rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.spinner {
+  width: 34px;
+  height: 34px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-top-color: #e50914;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.error-title {
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.error-sub {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.error-hint {
+  font-size: 13px;
+  color: rgba(229, 9, 20, 0.7);
+}
+
+.error-hint code {
+  font-family: monospace;
+  background: rgba(229, 9, 20, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+}

@@ -1,0 +1,31 @@
+.filters {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 5px 16px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+  font-family: "DM Sans", sans-serif;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  background: rgba(229, 9, 20, 0.15);
+  border-color: #e50914;
+  color: #fff;
+}
+
+.active {
+  background: rgba(229, 9, 20, 0.2);
+  border-color: #e50914;
+  color: #fff;
+}
