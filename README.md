@@ -1,27 +1,27 @@
-# PromptForge 🔥
+# CineScout 🎬
 
-> A high-performance AI prompt library built with React — browse, generate, and save prompts for any use case.
+> Discover and search movies in real time — powered by a live movie database API.
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Site-2C5282?style=for-the-badge)](https://prompt-forge-prompt-library.vercel.app)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Site-2C5282?style=for-the-badge)](https://cinescoout.vercel.app)
 [![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react)](https://reactjs.org/)
-[![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite)](https://vitejs.dev/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Vercel](https://img.shields.io/badge/Deployed-Vercel-000000?style=for-the-badge&logo=vercel)](https://vercel.com/)
 
 ---
 
 ## 📖 About
 
-PromptForge is a prompt library app that helps users discover, generate, and organise prompts for AI tools. The prompt generation engine is built entirely in JavaScript — no external AI API is used. All prompt logic, templates, and variations are crafted and structured by hand, giving full control over quality and output.
+CineScout is a movie discovery app that lets users search for any film and get real-time results from a live API. The focus was on clean data integration — handling loading states, async errors, and empty results gracefully — while keeping the UI fast and responsive across all devices.
 
 ---
 
 ## ✨ Features
 
-- 🧠 **Dynamic Prompt Engine** — custom-built JavaScript logic that generates prompt variations from reusable templates
-- 📁 **Category Browser** — browse prompts organised by use case (writing, coding, design, etc.)
-- 💾 **localStorage Persistence** — saved prompts stay in your library across sessions, no login needed
-- ⚡ **Fast & Lightweight** — built with Vite for near-instant load times
-- 📱 **Fully Responsive** — works seamlessly on mobile, tablet, and desktop
+- 🔍 **Real-Time Search** — fetch live movie data as you type
+- ⚡ **Async/Await Handling** — clean API integration with loading indicators and error fallbacks
+- 🎥 **Movie Detail View** — see ratings, overview, release date, and more
+- 📱 **Fully Responsive** — designed to work on mobile, tablet, and desktop
+- 🚫 **Empty State Handling** — friendly UI feedback when no results are found
 
 ---
 
@@ -30,10 +30,9 @@ PromptForge is a prompt library app that helps users discover, generate, and org
 | Technology | Purpose |
 |---|---|
 | React | UI components and state management |
-| Vite | Build tool and dev server |
-| Tailwind CSS | Styling and responsive design |
-| React Router | Client-side navigation |
-| localStorage | Prompt persistence across sessions |
+| JavaScript (ES6+) | Application logic and API handling |
+| HTML5 & CSS3 | Structure and styling |
+| RESTful API | Live movie data |
 | Vercel | Deployment |
 
 ---
@@ -44,20 +43,32 @@ PromptForge is a prompt library app that helps users discover, generate, and org
 
 - Node.js v18+
 - npm or yarn
+- A movie API key (e.g. [TMDB](https://www.themoviedb.org/documentation/api))
 
 ### Installation
 
 ```bash
 # Clone the repository
-git clone https://github.com/akshitbodrya-07/promptforge.git
+git clone https://github.com/akshitbodrya-07/cinescout.git
 
 # Navigate into the project
-cd promptforge
+cd cinescout
 
 # Install dependencies
 npm install
+```
 
-# Start the development server
+### Environment Variables
+
+Create a `.env` file in the root directory:
+
+```env
+VITE_API_KEY=your_api_key_here
+```
+
+### Run the App
+
+```bash
 npm run dev
 ```
 
@@ -74,13 +85,12 @@ npm run build
 ## 📁 Project Structure
 
 ```
-promptforge/
+cinescout/
 ├── public/
 ├── src/
-│   ├── components/       # Reusable UI components
-│   ├── data/             # Prompt templates and categories (JS)
-│   ├── pages/            # Route-level pages
-│   ├── utils/            # Prompt generation logic
+│   ├── components/       # Reusable UI components (SearchBar, MovieCard, etc.)
+│   ├── pages/            # Route-level pages (Home, MovieDetail)
+│   ├── services/         # API fetch logic
 │   ├── App.jsx
 │   └── main.jsx
 ├── index.html
@@ -91,10 +101,10 @@ promptforge/
 
 ## 🔮 Roadmap
 
-- [ ] Add search and filter across all prompts
-- [ ] Export saved prompts as a text file
-- [ ] Dark mode toggle
-- [ ] Share prompts via URL
+- [ ] Add genre filter and sort by rating / release date
+- [ ] Watchlist feature with localStorage
+- [ ] Trending movies section on homepage
+- [ ] Pagination or infinite scroll
 
 ---
 
